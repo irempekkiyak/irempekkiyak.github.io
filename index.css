@@ -1,0 +1,283 @@
+*{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      html, body {
+          min-height: 100vh;
+          background: rgb(156,104,126);
+background: linear-gradient(0deg, rgba(156,104,126,1) 0%, rgba(85,3,39,1) 12%, rgba(53,2,24,1) 47%, rgba(22,0,9,1) 87%);}
+      
+     
+
+      .emoji{
+        flex: 1;
+        position: relative;
+      } 
+      
+      .im {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(170%, -50%); 
+          z-index: 1;
+          width:500px;height:350px;
+          object-fit: cover;
+      }
+      
+    #navbar{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+        z-index: 10;
+    }
+    .nav-links li{
+        display: inline-block;
+        margin-right: 4rem;
+        padding: 25px;    
+    }
+    .nav-links li a{
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+      .wrapper {
+        max-width: 1280px;
+        width: 80%;
+        padding: 0 5%;
+        padding-top: 5%;
+      }
+
+    
+      h1 {
+        font-family: "Mada", sans-serif;
+        color: #fff;
+        letter-spacing: 0.05rem;
+        font-weight: 500;
+        max-width: 860px;
+        font-size: 1rem;
+        display: block;
+        padding-top: 75px;
+        margin: 0;
+      }
+      
+      h1 span:first-child {
+        display: inline-block;
+        width: 100%;
+      }
+      
+      h1 span.title {
+        font-weight: 650;
+      }
+      
+      @media (min-width: 675px) {
+        h1 {
+          font-size: 2.1rem;
+        }
+      }
+      
+      
+      @media (min-width: 1100px) {
+        h1 {
+          padding-top: 150px;
+          font-size: 3rem;
+          max-width: 890px;
+        }
+      }
+      
+      .container-flip {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        width: 100%;
+        height: 37px;
+      }
+      
+    
+      @media (min-width: 675px) {
+        .container-flip {
+          width: 80%;
+          top: 7px;
+          height: 49px;
+        }
+      }
+      
+     
+     
+      .container-flip span {
+        position: absolute;
+        white-space: nowrap;
+        opacity: 0;
+        -webkit-animation: rotate-word 10s linear infinite;
+                animation: rotate-word 10s linear infinite;
+                color: #ff00a1;
+        background: -webkit-linear-gradient(left, #ff00a1, #bf0000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+                
+      }
+    
+      
+      .container-flip span:nth-child(2) {
+        -webkit-animation-delay: 2.5s;
+                animation-delay: 2.5s;
+                
+      }
+      .container-flip span:nth-child(3) {
+        -webkit-animation-delay: 5s;
+                animation-delay: 5s;
+                
+      }
+      
+     
+      @-webkit-keyframes rotate-word {
+        0% {
+          opacity: 0;
+        }
+        1% {
+          -webkit-transform: translateY(-20px);
+                  transform: translateY(-20px);
+        }
+        4% {
+          opacity: 0;
+        }
+        5% {
+          opacity: 1;
+          -webkit-transform: translateY(0px);
+                  transform: translateY(0px);
+        }
+        17% {
+          opacity: 1;
+          -webkit-transform: translateY(0px);
+                  transform: translateY(0px);
+        }
+        19% {
+          opacity: 0;
+        }
+        20% {
+          -webkit-transform: translateY(20px);
+                  transform: translateY(20px);
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      
+      
+      
+      .flip {
+        width: 100%;
+      }
+      
+      .flip::after {
+        content: '';
+        display: inline-block;
+        -webkit-transform: translateX(5px);
+                transform: translateX(5px);
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+      }
+  
+    #home{
+      height: 100vh;
+      min-height: 100vh;
+    }
+    #content{
+      height: 100vh;
+      min-height: 100vh;
+    }
+ 
+  #project{
+    height: 100vh;
+    min-height: 100vh;
+    
+}
+    .section-links{
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20%;
+    }
+    .section-links h2{
+        font-size: 80px;
+        color: #ff00a1;
+        background: -webkit-linear-gradient(left, #ff00a1, #bf0000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+   
+    .contact{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 980px;
+        margin-top: 100px;
+        margin-left: 250px;
+        justify-content: space-evenly;
+    }
+    .contact-grid{
+        font-size: 30px;
+    }
+    .contact a{
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 25px;
+    }
+    a:hover{
+      color: #ff00a1;
+      background: -webkit-linear-gradient(left, #ff00a1, #bf0000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+        
+    }
+   
+    .project-grid{
+      display: flex;
+      flex-direction: column;
+    }
+    #grid{
+      display: flex;
+      flex-direction: column;
+      padding: 5%;
+      height: 300px;
+      width: 400px;
+      
+  }
+  .image{
+      height: 200px;
+      width: 400px;
+      border-radius: 2%;
+  }
+  .project-header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.project-dec{
+  width: 400px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2%;
+  
+}
+.project-grid a{
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+}
