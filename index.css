@@ -257,6 +257,18 @@ background: linear-gradient(0deg, rgba(156,104,126,1) 0%, rgba(85,3,39,1) 12%, r
       height: 200px;
       width: 400px;
       border-radius: 2%;
+      
+  }
+  .cv{
+    height: 500px;
+      width: 800px;
+      position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(80%, 160%); 
+          z-index: 1;
+          object-fit: cover;
+      
   }
   .project-header{
     position: relative;
