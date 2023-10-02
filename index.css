@@ -112,8 +112,8 @@ background: linear-gradient(0deg, rgba(156,104,126,1) 0%, rgba(85,3,39,1) 12%, r
         position: absolute;
         white-space: nowrap;
         opacity: 0;
-        -webkit-animation: rotate-word 10s linear infinite;
-                animation: rotate-word 10s linear infinite;
+        -webkit-animation: rotate-word 4s linear infinite;
+                animation: rotate-word 4s linear infinite;
                 color: #ff00a1;
         background: -webkit-linear-gradient(left, #ff00a1, #bf0000);
         -webkit-background-clip: text;
@@ -122,19 +122,19 @@ background: linear-gradient(0deg, rgba(156,104,126,1) 0%, rgba(85,3,39,1) 12%, r
       }
     
       
-      .container-flip span:nth-child(2) {
-        -webkit-animation-delay: 2.5s;
-                animation-delay: 2.5s;
+      .container-flip span:nth-child(1) {
+        -webkit-animation-delay: 1s;
+                animation-delay: 1s;
                 
       }
-      .container-flip span:nth-child(3) {
-        -webkit-animation-delay: 5s;
-                animation-delay: 5s;
+      .container-flip span:nth-child(2) {
+        -webkit-animation-delay: 3s;
+                animation-delay: 3s;
                 
       }
       
-     
-      @-webkit-keyframes rotate-word {
+    
+      @keyframes rotate-word {
         0% {
           opacity: 0;
         }
@@ -156,21 +156,23 @@ background: linear-gradient(0deg, rgba(156,104,126,1) 0%, rgba(85,3,39,1) 12%, r
                   transform: translateY(0px);
         }
         19% {
-          opacity: 0;
+          opacity: 1;
         }
-        20% {
+        30% {
+          opacity: 0;
+          -webkit-transform: translateY(10px);
+                  transform: translateY(10px);
+        }
+        70% {
+          opacity: 0;
           -webkit-transform: translateY(20px);
                   transform: translateY(20px);
         }
-        80% {
-          opacity: 0;
-        }
+        
         100% {
           opacity: 0;
-        }
-      }
-      
-      
+          
+        }}
       
       .flip {
         width: 100%;
@@ -248,15 +250,29 @@ background: linear-gradient(0deg, rgba(156,104,126,1) 0%, rgba(85,3,39,1) 12%, r
     #grid{
       display: flex;
       flex-direction: column;
-      padding: 5%;
-      height: 300px;
-      width: 400px;
+      position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(15%, 200%); 
+          z-index: 1;
+          object-fit: cover;
+      padding-top: 0;
       
   }
+  #grid2{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(15%, 290%); 
+          z-index: 1;
+          object-fit: cover;
+    
+}
   .image{
-      height: 200px;
-      width: 400px;
-      border-radius: 2%;
+      height: 300px;
+      width: 370px;
       
   }
   .cv{
@@ -265,7 +281,7 @@ background: linear-gradient(0deg, rgba(156,104,126,1) 0%, rgba(85,3,39,1) 12%, r
       position: absolute;
           top: 0;
           left: 0;
-          transform: translate(80%, 160%); 
+          transform: translate(75%, 165%); 
           z-index: 1;
           object-fit: cover;
       
