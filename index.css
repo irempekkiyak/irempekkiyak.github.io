@@ -159,10 +159,20 @@ background: linear-gradient(0deg, rgba(156,104,126,1) 0%, rgba(85,3,39,1) 12%, r
           opacity: 1;
         }
         30% {
-          opacity: 0;
+          opacity: 1;
           -webkit-transform: translateY(10px);
                   transform: translateY(10px);
         }
+        50% {
+          opacity: 0;
+          -webkit-transform: translateY(20px);
+                  transform: translateY(20px);
+        } 
+        60% {
+          opacity: 0;
+          -webkit-transform: translateY(20px);
+                  transform: translateY(20px);
+        }   
         70% {
           opacity: 0;
           -webkit-transform: translateY(20px);
@@ -207,7 +217,7 @@ background: linear-gradient(0deg, rgba(156,104,126,1) 0%, rgba(85,3,39,1) 12%, r
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 20%;
+        padding-top: 15%;
     }
     .section-links h2{
         font-size: 80px;
@@ -221,16 +231,18 @@ background: linear-gradient(0deg, rgba(156,104,126,1) 0%, rgba(85,3,39,1) 12%, r
         display: flex;
         justify-content: center;
         width: 100%;
-        max-width: 980px;
+        max-width: 970px;
         margin-top: 100px;
-        margin-left: 250px;
+        margin-left: 230px;
+        
         justify-content: space-evenly;
     }
     .contact-grid{
         font-size: 30px;
+
     }
     .contact a{
-        text-decoration: none;
+        text-decoration:none;
         color: #fff;
         cursor: pointer;
         font-size: 25px;
@@ -241,6 +253,9 @@ background: linear-gradient(0deg, rgba(156,104,126,1) 0%, rgba(85,3,39,1) 12%, r
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
         
+    }
+    .contact img{
+        margin-bottom: -5px;
     }
    
     .project-grid{
@@ -276,12 +291,12 @@ background: linear-gradient(0deg, rgba(156,104,126,1) 0%, rgba(85,3,39,1) 12%, r
       
   }
   .cv{
-    height: 500px;
-      width: 800px;
+    height: 530px;
+      width: 700px;
       position: absolute;
           top: 0;
           left: 0;
-          transform: translate(75%, 165%); 
+          transform: translate(85%, 155%); 
           z-index: 1;
           object-fit: cover;
       
