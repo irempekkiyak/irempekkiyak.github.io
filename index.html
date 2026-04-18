@@ -6,72 +6,222 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mada:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Irem Pekkıyak</title>
 </head>
 
 <body>
-    
-        <nav id="navbar">
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <span class="nav-logo">IP</span>
             <ul class="nav-links">
                 <li><a href="#home">About</a></li>
-                <li><a href="#project">Experience</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#project">Projects</a></li>
                 <li><a href="#content">Contact</a></li>
             </ul>
-        </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-        <section id="home">
-        <div class="wrapper">
-            <h1><span>Hey, I'm Irem!</span> I'm a <span class="title">Computer Engineering Student</span> and
-                <span class="container-flip entry-title">
-                  <span >Mobile Developer</span>
-                  <span >Front-end Developer</span>
-                </span> <!-- /.container-flip-->
-              </h1>
-              <div class="emoji">
-                <img src="images/emoji.png" class="im">  
-           </div>
+    <section id="home">
+        <div class="hero-wrapper">
+            <div class="hero-text">
+                <h1>
+                    <span class="greeting">Hey, I'm Irem!</span>
+                    I'm a <span class="title">Computer Engineering Graduate</span> and
+                    <span class="container-flip entry-title">
+                        <span>Data Analyst</span>
+                        <span>Front-end Developer</span>
+                    </span>
+                </h1>
+                <p class="hero-subtitle">Based in Ankara, Turkey &middot; Working at Turkish Aerospace Industries</p>
+                <div class="hero-cta">
+                    <a href="#experience" class="btn-primary">View Experience</a>
+                    <a href="#content" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="emoji">
+                <img src="images/emoji.png" class="im" alt="Irem's avatar">
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="section-wrapper">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Data Analyst / Project Engineer</h3>
+                            <span class="timeline-date">July 2024 – Present</span>
+                        </div>
+                        <p class="timeline-company">Turkish Aerospace Industries (TAI) &middot; Ankara, Turkey</p>
+                        <ul>
+                            <li>Developing dashboards and reports for upper management using SQL, Python, and Power BI</li>
+                            <li>Optimized SQL queries reducing a critical metric load time from 10s to 3s</li>
+                            <li>Responsible for Advanced Resources Planning (ARP) Tool analysis and data-driven insights</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Data Analytics Bootcamp</h3>
+                            <span class="timeline-date">Nov 2024 – Present</span>
+                        </div>
+                        <p class="timeline-company">MIUUL Bootcamp</p>
+                        <ul>
+                            <li>EDA, RFM analysis, and customer segmentation on real-world datasets</li>
+                            <li>Built interactive Power BI dashboards for business metrics visualization</li>
+                            <li>Applied statistical analysis and hypothesis testing using Python and SQL</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer (Part-time)</h3>
+                            <span class="timeline-date">Dec 2023 – June 2024</span>
+                        </div>
+                        <p class="timeline-company">Turkish Aerospace Industries (TAI) &middot; Ankara, Turkey</p>
+                        <ul>
+                            <li>Implemented algorithms for engine maintenance time calculations using FTI data</li>
+                            <li>Created reporting dashboards using SQL and ARP for upper management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineering Intern</h3>
+                            <span class="timeline-date">Aug 2023 – Sep 2023</span>
+                        </div>
+                        <p class="timeline-company">Roketsan &middot; Ankara, Turkey</p>
+                        <ul>
+                            <li>Built a Python tkinter GUI for sensor optimization on monitoring maps</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineering Intern</h3>
+                            <span class="timeline-date">July 2022 – Aug 2022</span>
+                        </div>
+                        <p class="timeline-company">Tr Eğitim ve Teknolojileri &middot; Ankara, Turkey</p>
+                        <ul>
+                            <li>Developed Flutter mobile UI for a mentor-mentee app with Node.js &amp; Spring Boot backend</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 class="section-title skills-title">Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL / PostgreSQL</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Flutter</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">HTML / CSS</span>
+                <span class="skill-tag">Scrum / Agile</span>
+                <span class="skill-tag">Project Management</span>
+                <span class="skill-tag">UI/UX Wireframing</span>
+            </div>
         </div>
     </section>
 
     <section id="project">
-        <div class="project-grid">
-            <a id="grid" href="https://github.com/irempekkiyak/f4-bootcamp" target="_blank">
-                <img class="image" src="images/kip.png">
-                <p class="project-dec">Kitchen In Pocket</p>
-            </a>
-            <a id="grid2" href="https://github.com/irempekkiyak/M2M-MobileApp" target="_blank">
-                <img class="image"
-                    src="images/m2m.png" alt="">
-                <p class="project-dec">Mentor to Mentee</p>
-            </a>
-                <img class="cv"
-                    src="images/cv.png" alt="">
-                
-          
-            
+        <div class="section-wrapper">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+
+                <a class="project-card" href="https://qrcodeams.netlify.app/" target="_blank">
+                    <div class="project-card-body project-card-body--noimg">
+                        <div class="project-icon">&#x1F4F1;</div>
+                        <h3>AI Powered QR-Code AMS</h3>
+                        <p>Attendance Management System with Android UI in Kotlin &amp; Compose. Final year project with AI-powered QR code features.</p>
+                        <span class="project-link">View Live &rarr;</span>
+                    </div>
+                </a>
+
+                <a class="project-card" href="https://github.com/irempekkiyak/f4-bootcamp" target="_blank">
+                    <div class="project-card-img">
+                        <img src="images/kip.png" alt="Kitchen In Pocket">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Kitchen In Pocket</h3>
+                        <p>A kitchen management app that tracks expiration dates, suggests recipes based on available ingredients, and creates personalized shopping lists.</p>
+                        <span class="project-link">View on GitHub &rarr;</span>
+                    </div>
+                </a>
+
+                <a class="project-card" href="https://github.com/irempekkiyak/M2M-MobileApp" target="_blank">
+                    <div class="project-card-img">
+                        <img src="images/m2m.png" alt="Mentor to Mentee">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Mentor to Mentee</h3>
+                        <p>A mobile application connecting mentors and mentees, built with Flutter for the frontend and Node.js &amp; Spring Boot for the backend.</p>
+                        <span class="project-link">View on GitHub &rarr;</span>
+                    </div>
+                </a>
+
+            </div>
         </div>
     </section>
 
-    
-
-      <section id="content">
-        <div class="section-links">
-            <img src="images/send.png">
-            <h2>Let's Get In Touch...</h2>
-        </div>
-        <div class="contact">
-            <a class="contact-grid" href="https://www.linkedin.com/in/irempekkiyak" target="_blank">
-                <img src="images/linkedin.png">
-                LinkedIn</a>
-            <a class="contact-grid" href="https://github.com/irempekkiyak" target="_blank">
-                <img src="images/github.png">
-                GitHup</a>
-            <a class="contact-grid" href="mailto:example@example.com" target="_blank">
-                <img src="images/mail.png">
-                Send a mail</a>
+    <section id="content">
+        <div class="section-wrapper contact-wrapper">
+            <div class="section-links">
+                <img src="images/send.png" alt="Contact">
+                <h2>Let's Get In Touch</h2>
+            </div>
+            <div class="contact">
+                <a class="contact-grid" href="https://www.linkedin.com/in/irempekkiyak" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                    LinkedIn
+                </a>
+                <a class="contact-grid" href="https://github.com/irempekkiyak" target="_blank">
+                    <img src="images/github.png" alt="GitHub">
+                    GitHub
+                </a>
+                <a class="contact-grid" href="mailto:pekkiyakirem@gmail.com">
+                    <img src="images/mail.png" alt="Email">
+                    Send a Mail
+                </a>
+            </div>
         </div>
     </section>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
 
 </body>
-
 </html>
