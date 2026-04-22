@@ -1,227 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Mada:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Irem Pekkıyak</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İrem Pekkıyak — Data Analyst &amp; Software Engineer</title>
+  <meta name="description" content="İrem Pekkıyak is a Data Analyst and Software Engineer at TUSAŞ, Ankara. Computer Engineering graduate with a 3.75 GPA, specializing in SQL optimization, Power BI dashboards, and full-stack development." />
+  <meta property="og:title" content="İrem Pekkıyak — Data Analyst &amp; Software Engineer" />
+  <meta property="og:description" content="Turning complex data into clear decisions." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <nav id="navbar">
-        <div class="nav-container">
-            <span class="nav-logo">IP</span>
-            <ul class="nav-links">
-                <li><a href="#home">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#content">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+  <!-- NAVIGATION -->
+  <header class="nav-wrapper" id="nav">
+    <nav class="nav-inner">
+      <a href="#hero" class="nav-logo">ip.</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="mailto:pekkiyakirem@gmail.com" class="nav-cta">Say hello</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
+  </header>
 
-    <section id="home">
-        <div class="hero-wrapper">
-            <div class="hero-text">
-                <h1>
-                    <span class="greeting">Hey, I'm Irem!</span>
-                    I'm a <span class="title">Computer Engineering Graduate</span> and
-                    <span class="container-flip entry-title">
-                        <span>Data Analyst</span>
-                        <span>Front-end Developer</span>
-                    </span>
-                </h1>
-                <p class="hero-subtitle">Based in Ankara, Turkey &middot; Working at Turkish Aerospace Industries</p>
-                <div class="hero-cta">
-                    <a href="#experience" class="btn-primary">View Experience</a>
-                    <a href="#content" class="btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="emoji">
-                <img src="images/emoji.png" class="im" alt="Irem's avatar">
-            </div>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <ul role="list">
+      <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+      <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+      <li><a href="#experience" onclick="closeMobileMenu()">Experience</a></li>
+      <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="hero-bg-glow" aria-hidden="true"></div>
+      <div class="hero-container">
+        <div class="hero-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Currently at TUSAŞ &nbsp;·&nbsp; Ankara, Turkey
         </div>
+        <h1 class="hero-name">İrem<br>Pekkıyak</h1>
+        <div class="hero-title-row" aria-hidden="true">
+          <span class="hero-rule"></span>
+          <p class="hero-title">Data Analyst &amp; Software Engineer</p>
+          <span class="hero-rule"></span>
+        </div>
+        <p class="hero-tagline">
+          Data analytics meets software engineering.
+          <span class="hero-tagline-sub">I work at the intersection of both — building tools and reports that help teams understand their data.</span>
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="https://github.com/irempekkiyak" target="_blank" rel="noopener noreferrer" class="btn-outline">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/irempekkiyak" target="_blank" rel="noopener noreferrer" class="btn-ghost">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
     </section>
 
-    <section id="experience">
-        <div class="section-wrapper">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Data Analyst / Project Engineer</h3>
-                            <span class="timeline-date">July 2024 – Present</span>
-                        </div>
-                        <p class="timeline-company">Turkish Aerospace Industries (TAI) &middot; Ankara, Turkey</p>
-                        <ul>
-                            <li>Developing dashboards and reports for upper management using SQL, Python, and Power BI</li>
-                            <li>Optimized SQL queries reducing a critical metric load time from 10s to 3s</li>
-                            <li>Responsible for Advanced Resources Planning (ARP) Tool analysis and data-driven insights</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Data Analytics Bootcamp</h3>
-                            <span class="timeline-date">Nov 2024 – Present</span>
-                        </div>
-                        <p class="timeline-company">MIUUL Bootcamp</p>
-                        <ul>
-                            <li>EDA, RFM analysis, and customer segmentation on real-world datasets</li>
-                            <li>Built interactive Power BI dashboards for business metrics visualization</li>
-                            <li>Applied statistical analysis and hypothesis testing using Python and SQL</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Software Engineer (Part-time)</h3>
-                            <span class="timeline-date">Dec 2023 – June 2024</span>
-                        </div>
-                        <p class="timeline-company">Turkish Aerospace Industries (TAI) &middot; Ankara, Turkey</p>
-                        <ul>
-                            <li>Implemented algorithms for engine maintenance time calculations using FTI data</li>
-                            <li>Created reporting dashboards using SQL and ARP for upper management</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Software Engineering Intern</h3>
-                            <span class="timeline-date">Aug 2023 – Sep 2023</span>
-                        </div>
-                        <p class="timeline-company">Roketsan &middot; Ankara, Turkey</p>
-                        <ul>
-                            <li>Built a Python tkinter GUI for sensor optimization on monitoring maps</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Software Engineering Intern</h3>
-                            <span class="timeline-date">July 2022 – Aug 2022</span>
-                        </div>
-                        <p class="timeline-company">Tr Eğitim ve Teknolojileri &middot; Ankara, Turkey</p>
-                        <ul>
-                            <li>Developed Flutter mobile UI for a mentor-mentee app with Node.js &amp; Spring Boot backend</li>
-                        </ul>
-                    </div>
-                </div>
-
+    <!-- ABOUT -->
+    <section class="section about-section" id="about" aria-label="About me">
+      <div class="container">
+        <p class="section-label reveal">About</p>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <h2 class="section-heading">Building at the intersection of <em>data</em> and <em>engineering</em></h2>
+            <p>I'm a Computer Engineering graduate from Ankara University (High Honour, 3.75 GPA) currently working as a Data Analyst &amp; Project Engineer at Turkish Aerospace Industries (TUSAŞ). My day-to-day involves building dashboards, optimizing SQL performance, and delivering data-driven insights to directors and senior management.</p>
+            <p>My background spans the full spectrum — from engineering sensor optimization tools in Python, to building cross-platform mobile apps in Flutter and Kotlin, to designing interactive Power BI dashboards that move strategic decisions forward.</p>
+            <p>I care about clarity, precision, and making data accessible to anyone who needs it.</p>
+            <div class="about-links">
+              <a href="mailto:pekkiyakirem@gmail.com" class="about-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+                pekkiyakirem@gmail.com
+              </a>
+              <a href="https://github.com/irempekkiyak" target="_blank" rel="noopener noreferrer" class="about-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                github.com/irempekkiyak
+              </a>
+              <a href="https://linkedin.com/in/irempekkiyak" target="_blank" rel="noopener noreferrer" class="about-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                linkedin.com/in/irempekkiyak
+              </a>
             </div>
-
-            <h2 class="section-title skills-title">Skills</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">SQL / PostgreSQL</span>
-                <span class="skill-tag">Power BI</span>
-                <span class="skill-tag">Data Analysis</span>
-                <span class="skill-tag">Flutter</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">HTML / CSS</span>
-                <span class="skill-tag">Scrum / Agile</span>
-                <span class="skill-tag">Project Management</span>
-                <span class="skill-tag">UI/UX Wireframing</span>
+          </div>
+          <div class="about-visual reveal" aria-hidden="true">
+            <div class="profile-card">
+              <div class="profile-card-header">
+                <div class="profile-avatar">
+                  <img src="memoji.png" alt="İrem Pekkıyak memoji" />
+                </div>
+              </div>
+              <div class="profile-card-body">
+                <p class="profile-name">İrem Pekkıyak</p>
+                <p class="profile-role">Data Analyst &amp; Project Engineer</p>
+                <p class="profile-co">Turkish Aerospace Industries (TUSAŞ)</p>
+                <div class="profile-divider"></div>
+                <div class="profile-stat-row">
+                  <div class="profile-stat">
+                    <span class="ps-val">4+</span>
+                    <span class="ps-lbl">Projects</span>
+                  </div>
+                  <div class="profile-stat">
+                    <span class="ps-val">2</span>
+                    <span class="ps-lbl">Companies</span>
+                  </div>
+                </div>
+                <div class="profile-tags">
+                  <span>Python</span><span>SQL</span><span>Power BI</span><span>Analytics</span>
+                </div>
+              </div>
             </div>
+            <div class="card-deco deco-1" aria-hidden="true"></div>
+            <div class="card-deco deco-2" aria-hidden="true"></div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="project">
-        <div class="section-wrapper">
-            <h2 class="section-title">Projects</h2>
-            <div class="project-grid">
+    <!-- SKILLS -->
+    <section class="section skills-section" id="skills" aria-label="Skills">
+      <div class="container">
+        <p class="section-label reveal">Skills</p>
+        <h2 class="section-heading reveal">Tools I work with</h2>
+        <div class="skills-grid">
 
-                <a class="project-card" href="https://qrcodeams.netlify.app/" target="_blank">
-                    <div class="project-card-body project-card-body--noimg">
-                        <div class="project-icon">&#x1F4F1;</div>
-                        <h3>AI Powered QR-Code AMS</h3>
-                        <p>Attendance Management System with Android UI in Kotlin &amp; Compose. Final year project with AI-powered QR code features.</p>
-                        <span class="project-link">View Live &rarr;</span>
-                    </div>
-                </a>
-
-                <a class="project-card" href="https://github.com/irempekkiyak/f4-bootcamp" target="_blank">
-                    <div class="project-card-img">
-                        <img src="images/kip.png" alt="Kitchen In Pocket">
-                    </div>
-                    <div class="project-card-body">
-                        <h3>Kitchen In Pocket</h3>
-                        <p>A kitchen management app that tracks expiration dates, suggests recipes based on available ingredients, and creates personalized shopping lists.</p>
-                        <span class="project-link">View on GitHub &rarr;</span>
-                    </div>
-                </a>
-
-                <a class="project-card" href="https://github.com/irempekkiyak/M2M-MobileApp" target="_blank">
-                    <div class="project-card-img">
-                        <img src="images/m2m.png" alt="Mentor to Mentee">
-                    </div>
-                    <div class="project-card-body">
-                        <h3>Mentor to Mentee</h3>
-                        <p>A mobile application connecting mentors and mentees, built with Flutter for the frontend and Node.js &amp; Spring Boot for the backend.</p>
-                        <span class="project-link">View on GitHub &rarr;</span>
-                    </div>
-                </a>
-
+          <div class="skill-group reveal">
+            <div class="skill-group-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             </div>
+            <h3 class="skill-group-title">Programming</h3>
+            <div class="skill-chips" role="list">
+              <span class="chip chip-accent" role="listitem">Python</span>
+              <span class="chip chip-accent" role="listitem">SQL</span>
+              <span class="chip" role="listitem">JavaScript</span>
+              <span class="chip" role="listitem">Kotlin</span>
+              <span class="chip" role="listitem">Dart / Flutter</span>
+              <span class="chip" role="listitem">C</span>
+              <span class="chip" role="listitem">HTML &amp; CSS</span>
+              <span class="chip" role="listitem">Node.js</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <div class="skill-group-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3 class="skill-group-title">Data &amp; Analytics</h3>
+            <div class="skill-chips" role="list">
+              <span class="chip chip-accent" role="listitem">Power BI</span>
+              <span class="chip chip-accent" role="listitem">PostgreSQL</span>
+              <span class="chip" role="listitem">Statistical Analysis</span>
+              <span class="chip" role="listitem">Hypothesis Testing</span>
+              <span class="chip" role="listitem">RFM Analysis</span>
+              <span class="chip" role="listitem">EDA</span>
+              <span class="chip" role="listitem">Data Mining</span>
+              <span class="chip" role="listitem">Pandas / NumPy</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <div class="skill-group-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3 class="skill-group-title">Tools &amp; Concepts</h3>
+            <div class="skill-chips" role="list">
+              <span class="chip chip-accent" role="listitem">Project Management</span>
+              <span class="chip" role="listitem">Scrum / Agile</span>
+              <span class="chip" role="listitem">Oracle Primavera P6</span>
+              <span class="chip" role="listitem">UI/UX Design</span>
+              <span class="chip" role="listitem">.NET / C#</span>
+              <span class="chip" role="listitem">Spring Boot</span>
+              <span class="chip" role="listitem">Git</span>
+              <span class="chip" role="listitem">REST APIs</span>
+            </div>
+          </div>
+
         </div>
+
+        <div class="certs-row reveal">
+          <span class="certs-label">Certifications</span>
+          <div class="certs-list">
+            <a href="https://www.hackerrank.com/certificates/iframe/b516885bbd42" target="_blank" rel="noopener noreferrer" class="cert-badge">HackerRank SQL (Intermediate)</a>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/QWU6PU98J8KD" target="_blank" rel="noopener noreferrer" class="cert-badge">Project Management Specialization</a>
+            <a href="https://freecodecamp.org/certification/irempekkiyak/responsive-web-design" target="_blank" rel="noopener noreferrer" class="cert-badge">Responsive Web Design</a>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/9FRSFUETM6PG" target="_blank" rel="noopener noreferrer" class="cert-badge">Managing Project Risks &amp; Changes</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="content">
-        <div class="section-wrapper contact-wrapper">
-            <div class="section-links">
-                <img src="images/send.png" alt="Contact">
-                <h2>Let's Get In Touch</h2>
+    <!-- EXPERIENCE -->
+    <section class="section experience-section" id="experience" aria-label="Work experience">
+      <div class="container">
+        <p class="section-label reveal">Experience</p>
+        <h2 class="section-heading reveal">Where I've worked</h2>
+        <div class="timeline">
+
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <time class="timeline-period">July 2024 — Present</time>
+              <span class="timeline-badge current">Current</span>
             </div>
-            <div class="contact">
-                <a class="contact-grid" href="https://www.linkedin.com/in/irempekkiyak" target="_blank">
-                    <img src="images/linkedin.png" alt="LinkedIn">
-                    LinkedIn
-                </a>
-                <a class="contact-grid" href="https://github.com/irempekkiyak" target="_blank">
-                    <img src="images/github.png" alt="GitHub">
-                    GitHub
-                </a>
-                <a class="contact-grid" href="mailto:pekkiyakirem@gmail.com">
-                    <img src="images/mail.png" alt="Email">
-                    Send a Mail
-                </a>
+            <div class="timeline-content">
+              <h3 class="timeline-role">Data Analyst / Project Engineer</h3>
+              <p class="timeline-company">Turkish Aerospace Industries (TUSAŞ)</p>
+              <ul class="timeline-list">
+                <li>Manage the Advanced Resources Planning (ARP) Tool — ensuring efficient utilization through data-driven resource analysis</li>
+                <li>Build dashboards and reports for upper management including directors and deputy directors, directly supporting strategic decision-making</li>
+                <li>Optimized critical SQL queries, reducing metric load time from 10 to 3 seconds for a key performance metric</li>
+                <li>Leverage SQL, Python, and Power BI to automate reporting and generate actionable visual analytics</li>
+              </ul>
+              <div class="timeline-tags" aria-label="Technologies used">
+                <span>SQL</span><span>Python</span><span>Power BI</span><span>ARP</span>
+              </div>
             </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <time class="timeline-period">Nov 2024 — Apr 2025</time>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-role">Data Analytics Bootcamp</h3>
+              <p class="timeline-company">MIUUL</p>
+              <ul class="timeline-list">
+                <li>Applied statistical analysis, hypothesis testing, and data mining to real-world datasets from leading Turkish companies (FLO, Armut)</li>
+                <li>Implemented RFM analysis and customer segmentation models to enhance retention and business analytics</li>
+                <li>Developed interactive Power BI dashboards visualizing key business metrics for decision-making</li>
+              </ul>
+              <div class="timeline-tags" aria-label="Technologies used">
+                <span>Python</span><span>SQL</span><span>Power BI</span><span>Statistics</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <time class="timeline-period">Dec 2023 — June 2024</time>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-role">Data Engineer — Part-time</h3>
+              <p class="timeline-company">Turkish Aerospace Industries (TUSAŞ)</p>
+              <ul class="timeline-list">
+                <li>Implemented algorithms to calculate engine maintenance time using Flight Test Instrumentation (FTI) data</li>
+                <li>Built SQL and ARP reporting dashboards for upper management presentations</li>
+                <li>Completed specialized training in Oracle Primavera P6 and project portfolio management</li>
+              </ul>
+              <div class="timeline-tags" aria-label="Technologies used">
+                <span>SQL</span><span>Python</span><span>Oracle Primavera P6</span><span>ARP</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <time class="timeline-period">Aug 2023 — Sep 2023</time>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-role">Software Engineering Intern</h3>
+              <p class="timeline-company">Roketsan</p>
+              <ul class="timeline-list">
+                <li>Designed and built a Python tkinter GUI to optimize sensor placement on maps for Roketsan's monitoring system</li>
+                <li>Researched lcov code coverage analysis to evaluate test coverage across software programs</li>
+              </ul>
+              <div class="timeline-tags" aria-label="Technologies used">
+                <span>Python</span><span>tkinter</span><span>lcov</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <time class="timeline-period">July 2022 — Aug 2022</time>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-role">Software Engineering Intern</h3>
+              <p class="timeline-company">Tr Eğitim ve Teknolojileri</p>
+              <ul class="timeline-list">
+                <li>Built the complete mobile interface for a mentor-mentee matching application in Flutter, within an Agile team</li>
+                <li>Collaborated on Node.js and Spring Boot backend services for the platform</li>
+              </ul>
+              <div class="timeline-tags" aria-label="Technologies used">
+                <span>Flutter</span><span>Node.js</span><span>Spring Boot</span><span>Agile</span>
+              </div>
+            </div>
+          </article>
+
         </div>
+      </div>
     </section>
 
-    <script>
-        const toggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-        document.querySelectorAll('.nav-links a').forEach(a => {
-            a.addEventListener('click', () => navLinks.classList.remove('open'));
-        });
-    </script>
+    <!-- PROJECTS -->
+    <section class="section projects-section" id="projects" aria-label="Projects">
+      <div class="container">
+        <p class="section-label reveal">Projects</p>
+        <h2 class="section-heading reveal">Things I've built</h2>
+        <div class="projects-grid">
 
+          <article class="project-card featured reveal">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <div class="project-icon" aria-hidden="true">✦</div>
+                <div class="project-links">
+                  <a href="https://github.com/irempekkiyak" target="_blank" rel="noopener noreferrer" class="project-icon-btn" aria-label="View Glowpedia on GitHub">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                </div>
+              </div>
+              <span class="project-featured-badge">Featured</span>
+              <h3 class="project-title">Glowpedia</h3>
+              <p class="project-desc">AI-powered skincare intelligence platform — full-stack application with ingredient analysis, personalized skin profile matching, product search across 5,000+ items, and derm-curated insights. Built with a .NET 9 backend with JWT authentication, a custom Python scraper, and a rich frontend.</p>
+              <div class="project-tech" aria-label="Technologies">
+                <span>.NET 9</span><span>Python</span><span>JavaScript</span><span>HTML/CSS</span><span>JWT Auth</span><span>REST API</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <div class="project-icon" aria-hidden="true">◈</div>
+                <div class="project-links">
+                  <a href="https://qrcodeams.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-icon-btn" aria-label="View live demo">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">AI QR Attendance Management</h3>
+              <p class="project-desc">Final year capstone — an AI-powered attendance system using QR codes for real-time student/employee tracking. Responsible for designing and building the entire Android UI with modern Kotlin and Jetpack Compose.</p>
+              <div class="project-tech" aria-label="Technologies">
+                <span>Kotlin</span><span>Jetpack Compose</span><span>Android</span><span>QR Code</span><span>AI</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <div class="project-icon" aria-hidden="true">◇</div>
+                <div class="project-links">
+                  <a href="https://github.com/irempekkiyak/M2M-MobileApp" target="_blank" rel="noopener noreferrer" class="project-icon-btn" aria-label="View on GitHub">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                  <a href="https://prezi.com/p/vmi0gx2fs6rg/m2m/" target="_blank" rel="noopener noreferrer" class="project-icon-btn" aria-label="View presentation">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">M2M — Mentee to Mentor</h3>
+              <p class="project-desc">Cross-platform mentor-mentee matching mobile app. Designed the full mobile interface in Flutter within an Agile team. Backend services powered by Node.js and Spring Boot.</p>
+              <div class="project-tech" aria-label="Technologies">
+                <span>Flutter</span><span>Dart</span><span>Node.js</span><span>Spring Boot</span><span>Agile</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <div class="project-icon" aria-hidden="true">◎</div>
+                <div class="project-links">
+                  <a href="https://magnificent-llama-e2a048.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-icon-btn" aria-label="View live demo">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Customer Analytics Dashboard</h3>
+              <p class="project-desc">An interactive web application built during the MIUUL Data Analytics Bootcamp. Applies RFM analysis and customer segmentation on real datasets from Turkish companies to surface actionable retention insights.</p>
+              <div class="project-tech" aria-label="Technologies">
+                <span>React</span><span>Vite</span><span>Python</span><span>RFM Analysis</span><span>Segmentation</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <div class="project-icon" aria-hidden="true">▣</div>
+                <div class="project-links">
+                  <a href="https://app.powerbi.com/view?r=eyJrIjoiYTI5MWI1MGQtMDNlZS00ZDhhLWFlMjktMjFjNGU2ZDk4ODk5IiwidCI6IjFhNmZlYTNlLTE3MjAtNDdiZS05YTFiLTE3NTdiMzFiNDY1NiJ9" target="_blank" rel="noopener noreferrer" class="project-icon-btn" aria-label="View Power BI dashboard">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Business Analytics — Power BI Report</h3>
+              <p class="project-desc">A Power BI report developed during the MIUUL bootcamp, covering exploratory data analysis and key business metric visualization on real-world datasets. Built to support data-driven decision-making with clear, structured visuals.</p>
+              <div class="project-tech" aria-label="Technologies">
+                <span>Power BI</span><span>SQL</span><span>Python</span><span>EDA</span><span>Data Visualization</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <div class="project-icon" aria-hidden="true">◦</div>
+                <div class="project-links">
+                  <a href="https://github.com/irempekkiyak/f4-bootcamp" target="_blank" rel="noopener noreferrer" class="project-icon-btn" aria-label="View on GitHub">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Kitchen in Pocket</h3>
+              <p class="project-desc">Smart kitchen management mobile app that tracks expiration dates, suggests recipes based on available ingredients, and generates personalized shopping lists. Built during a Flutter bootcamp.</p>
+              <div class="project-tech" aria-label="Technologies">
+                <span>Flutter</span><span>Dart</span><span>Mobile</span><span>API Integration</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section education-section" id="education" aria-label="Education">
+      <div class="container">
+        <p class="section-label reveal">Education</p>
+        <h2 class="section-heading reveal">Academic background</h2>
+        <div class="edu-card reveal">
+          <div class="edu-logo-wrap">
+            <div class="edu-logo">AU</div>
+          </div>
+          <div class="edu-details">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">B.Eng. Computer Engineering</h3>
+                <p class="edu-university">Ankara University</p>
+              </div>
+              <div class="edu-meta-col">
+                <time class="edu-period">2020 — 2024</time>
+                <span class="edu-honor-badge">High Honour</span>
+              </div>
+            </div>
+            <p class="edu-note">Graduated with High Honour distinction. Focused on software engineering, algorithms, data structures, and systems design. Capstone project: AI-powered QR Code Attendance Management System built with Kotlin and Jetpack Compose.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="contact-inner reveal">
+          <p class="section-label">Contact</p>
+          <h2 class="contact-heading">Let's work together.</h2>
+          <p class="contact-sub">Whether it's a data challenge, an engineering project, or just a conversation — I'm open to it.</p>
+          <a href="mailto:pekkiyakirem@gmail.com" class="contact-email-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+            pekkiyakirem@gmail.com
+          </a>
+          <nav class="contact-links" aria-label="Social links">
+            <a href="https://github.com/irempekkiyak" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span class="contact-dot" aria-hidden="true">·</span>
+            <a href="https://linkedin.com/in/irempekkiyak" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span class="contact-dot" aria-hidden="true">·</span>
+            <a href="mailto:pekkiyakirem@gmail.com">Email</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">ip.</span>
+        <span class="footer-copy">© 2025 İrem Pekkıyak</span>
+        <span class="footer-right">Designed &amp; built by İrem</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
